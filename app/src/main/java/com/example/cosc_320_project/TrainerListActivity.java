@@ -50,7 +50,7 @@ public class TrainerListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 t1View.setAlpha((float) 0.75);
-
+                trainerPageLaunch(1);
             }
         });
 
@@ -58,7 +58,7 @@ public class TrainerListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 t2View.setAlpha((float) 0.75);
-
+                trainerPageLaunch(2);
             }
         });
 
@@ -66,15 +66,17 @@ public class TrainerListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 t3View.setAlpha((float) 0.75);
-
+                trainerPageLaunch(3);
             }
         });
 
-
     }
 
-    public void trainerPageLaunch() {
+    public void trainerPageLaunch(int trainer) {
         Intent intent = new Intent(this, TrainerListActivity.class);
+        if(trainer == 1){
+            //extras
+        }
         startActivity(intent);
     }
 }
