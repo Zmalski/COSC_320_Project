@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TrainerPageActivity"></activity>
-        <activity android:name=".TrainerListActivity" />
+        <activity android:name=".TrainerListActivity"
+            android:exported="true"/>
         <activity android:name=".BookAClassActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
