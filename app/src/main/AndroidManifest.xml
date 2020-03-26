@@ -9,11 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TrainerPageActivity"></activity>
+        <activity android:name=".TrainerPageActivity"/>
         <activity android:name=".TrainerListActivity"
             android:exported="true"/>
-        <activity android:name=".BookAClassActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".BookFacility"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Trainer"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".BookAClassActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

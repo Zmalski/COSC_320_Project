@@ -32,7 +32,7 @@ public class Trainer extends AppCompatActivity implements NavigationView.OnNavig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_trainer);
 
         home = new Intent(this, MainActivity.class );
         facility = new Intent(this, BookFacility.class);
