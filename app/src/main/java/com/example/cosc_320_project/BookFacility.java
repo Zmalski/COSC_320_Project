@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class BookAClassActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class BookFacility extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     DrawerLayout drawerLayout;
@@ -25,18 +25,18 @@ public class BookAClassActivity extends AppCompatActivity implements NavigationV
     ActionBarDrawerToggle toggle;
     Intent trainer;
     Intent home;
-    Intent facility;
+    Intent bookClass;
 
 
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book_a_class);
+        setContentView(R.layout.activity_book_facility);
 
         trainer = new Intent(this, Trainer.class );
         home = new Intent(this, MainActivity.class);
-        facility = new Intent(this, BookFacility.class);
+        bookClass = new Intent(this, BookAClassActivity.class);
 
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
@@ -55,13 +55,13 @@ public class BookAClassActivity extends AppCompatActivity implements NavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.bookclass:
-                Toast.makeText(BookAClassActivity.this, "ALREADY HERE", Toast.LENGTH_SHORT).show();
+                startActivity(bookClass);
                 break;
             case R.id.booktrainer:
                 startActivity(trainer);
                 break;
             case R.id.bookfacility:
-                startActivity(facility);
+                Toast.makeText(BookFacility.this, "ALREADY HERE", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.home:
                 startActivity(home);

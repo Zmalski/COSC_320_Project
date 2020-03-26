@@ -8,7 +8,7 @@
     android:id="@+id/drawer"
     android:background="@color/colorAccent"
     android:layout_height="match_parent"
-    tools:context=".BookAClassActivity">
+    tools:context=".BookFacility">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,7 +24,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <!-- PUT YOUR LAYOUT CODE HERE -->
-
 
 
 

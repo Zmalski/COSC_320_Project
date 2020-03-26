@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">COSC_320_Project</string>
-    <string name="BOOK_A_TRAINER">booktrainer</string>
-    <string name="CREATE_BOOKING">createbooking</string>
-    <string name="BOOK_A_FITNESS_CLASS">bookclass</string>
-    <string name="HOME">home</string>
-
+    <string name="drawerOpen">drawerOpen</string>
+    <string name="drawerClose">drawerClose</string>
 </resources>
