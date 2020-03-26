@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrainerActivityTest">
+    tools:context=".TrainerListActivity">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="283dp"
+        android:layout_height="208dp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="93dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
