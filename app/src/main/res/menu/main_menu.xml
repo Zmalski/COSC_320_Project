@@ -2,16 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/booktrainer"
-        android:title="@string/BOOK_A_TRAINER"
-        app:showAsAction="never"/>
-    <item android:id="@+id/createbooking"
-        android:title="@string/CREATE_BOOKING"
-        app:showAsAction="never"/>
+        android:title="booktrainer" />
+    <item android:id="@+id/bookfacility"
+        android:title="bookfacility" />
     <item android:id="@+id/bookclass"
-        android:title="@string/BOOK_A_FITNESS_CLASS"
-        app:showAsAction="never"/>
+        android:title="bookclass" />
     <item android:id="@+id/home"
-        android:title="@string/HOME"
-        app:showAsAction="never"/>
+        android:title="home" />
 </menu>
 
