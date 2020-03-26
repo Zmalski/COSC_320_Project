@@ -11,6 +11,9 @@
         android:layout_width="410dp"
         android:layout_height="153dp"
         android:layout_marginTop="72dp"
+        android:clickable="true"
+        android:alpha="0.25"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,6 +44,9 @@
         android:layout_width="412dp"
         android:layout_height="147dp"
         android:layout_marginTop="252dp"
+        android:clickable="true"
+        android:alpha="0.25"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,6 +95,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/trainer1" />
 
+    <View
+        android:id="@+id/trainer3View"
+        android:layout_width="409dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="424dp"
+        android:clickable="true"
+        android:background="@color/colorPrimaryDark"
+        android:alpha=".25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/trainer3Img"
         android:layout_width="120dp"
@@ -120,20 +137,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/trainer3View"
-        android:layout_width="409dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="424dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/trainerListBackButton"
         android:layout_width="131dp"
         android:layout_height="54dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="32dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
