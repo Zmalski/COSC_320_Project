@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class BookAClassTime extends AppCompatActivity {
 
-    TextView selectedClassView, selectedClassTitle, selectDateandTime, classDate, classTime, Disclaimer;
+    TextView selectedClassView, selectedClassTitle, selectDateandTime, classDate, classTime, Disclaimer, TitleSelectedClassEdit, TitleSelectedClassEditNumber;
     Button timeClassNext, timeClassBack;
 
 
@@ -20,11 +20,20 @@ public class BookAClassTime extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_a_class_time);
-        selectedClassTitle = findViewById(R.id.TitleSelectedClass);
+        TitleSelectedClassEdit = findViewById(R.id.TitleSelectedClassEdit);
+        TitleSelectedClassEditNumber = findViewById(R.id.TitleSelectedClassEditNumber);
 
         Intent i = getIntent();
         String nameText = i.getStringExtra("textbox1");
-        selectedClassTitle.setText(nameText + " has selected: ");
+        TitleSelectedClassEdit.setText(nameText);
+
+        Intent ii = getIntent();
+        String Number = ii.getStringExtra("textbox2");
+        TitleSelectedClassEditNumber.setText(Number);
+
+
+        selectedClassTitle = findViewById(R.id.TitleSelectedClass);
+        selectedClassTitle.setText("Has selected:");
 
         selectedClassView = findViewById(R.id.selectedClass);
         selectedClassView.setText(getIntent().getStringExtra("selectedClass"));
@@ -59,7 +68,7 @@ public class BookAClassTime extends AppCompatActivity {
         timeClassBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            backToClassBooking();
             }
         });
 
@@ -69,7 +78,15 @@ public class BookAClassTime extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+            Intent nextBtn = new Intent(BookAClassTime.this, BookAClassReview.class);
+            nextBtn.putExtra("textbox1", TitleSelectedClassEdit.getText().toString());
+            nextBtn.putExtra("textbox2", TitleSelectedClassEditNumber.getText().toString());
+            startActivity(nextBtn);
             }
         });
+    }
+
+    public void backToClassBooking(){
+        finish();
     }
 }

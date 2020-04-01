@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookAClassReview">
+
+
+    <TextView
+        android:id="@+id/memberNameRev"
+        android:textSize="13dp"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="512dp" />
+
+    <TextView
+        android:id="@+id/memberNameRevEdit"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="512dp"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/memberNumberRev"
+        android:textSize="13dp"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="439dp" />
+
+
+    <TextView
+        android:id="@+id/memberNumberRevEdit"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="439dp"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/classRev"
+        android:textSize="13dp"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="369dp" />
+
+    <TextView
+        android:id="@+id/classRevEdit"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="369dp"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/selectedTimeTitle"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_width="264dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="295dp" />
+
+    <TextView
+        android:id="@+id/selectedDateRev"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="227dp"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/selectedTimeRev"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="221dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="227dp"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/DisclaimerRev"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="125dp" />
+
+    <Button
+        android:id="@+id/cancelClass"
+        android:text="Cancel booking"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="272dp"
+        android:layout_marginBottom="26dp" />
+
+    <Button
+        android:text="Edit booking"
+        android:id="@+id/editClass"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="27dp" />
+
+    <Button
+        android:text="Confirm booking"
+        android:id="@+id/confirmClass"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="273dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="26dp" />
+
+
+</RelativeLayout>

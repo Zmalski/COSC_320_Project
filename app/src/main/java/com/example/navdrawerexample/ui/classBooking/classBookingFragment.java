@@ -83,6 +83,7 @@ public class classBookingFragment extends Fragment {
                 Intent nextBut = new Intent(getActivity(), BookAClassTime.class);
                 nextBut.putExtra("selectedClass", SelectedClass);
                 nextBut.putExtra("textbox1", editMemberName.getText().toString());
+                nextBut.putExtra("textbox2", editMemberNumber.getText().toString());
                 startActivity(nextBut);
             }
         });
