@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.trainerList.trainerListFragment">
+
+
+    <View
+        android:id="@+id/trainer1View"
+        android:layout_width="410dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="72dp"
+        android:clickable="true"
+        android:alpha="0.25"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trainer3Desc"
+        android:layout_width="232dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="480dp"
+        android:text="Trainer3 description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trainer1Name"
+        android:layout_width="228dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="84dp"
+        android:text="Trainer1 name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/trainer2View"
+        android:layout_width="412dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="252dp"
+        android:clickable="true"
+        android:alpha="0.25"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trainer2Name"
+        android:layout_width="228dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="264dp"
+        android:text="Trainer2 name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trainer3Name"
+        android:layout_width="228dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="444dp"
+        android:text="Trainer3 name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trainer1Desc"
+        android:layout_width="232dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="124dp"
+        android:text="Trainer1 description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/trainer2Img"
+        android:layout_width="122dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="264dp"
+        android:foreground="@drawable/trainer2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trainer1" />
+
+    <View
+        android:id="@+id/trainer3View"
+        android:layout_width="409dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="424dp"
+        android:clickable="true"
+        android:background="@color/colorPrimaryDark"
+        android:alpha=".25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/trainer3Img"
+        android:layout_width="120dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="444dp"
+        android:foreground="@drawable/trainer3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trainer1" />
+
+    <ImageView
+        android:id="@+id/trainer1Img"
+        android:layout_width="136dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trainer1" />
+
+    <TextView
+        android:id="@+id/trainer2Desc"
+        android:layout_width="232dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="300dp"
+        android:text="Trainer2 description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/trainerListBackButton"
+        android:layout_width="131dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="176dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="16dp"
+        android:text="Select a Trainer"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

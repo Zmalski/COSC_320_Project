@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">COSC_320_Project</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Trainers</string>
+    <string name="menu_slideshow">Classes</string>
+
+    <string name="home_second">Home Second</string>
+    <string-array name="datespinar">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+    <string-array name="areaspinar">
+        <item>Fitness Room</item>
+        <item>Pool</item>
+        <item>Gymnasium</item>
+    </string-array>
+    <string-array name="timespinar">
+        <item>9:00 AM</item>
+        <item>2:00 PM</item>
+        <item>4:00 PM</item>
+    </string-array>
+    <string-array name="fitnessClasses">
+
+        <item>Spin Class</item>
+        <item>Crossfit</item>
+        <item>Pilates</item>
+        <item>Yoga</item>
+    </string-array>
+    <string-array name="ClassTimes">
+        <item>6:00 AM</item>
+        <item>9:00 AM</item>
+        <item>2:00 PM</item>
+        <item>4:00 PM</item>
+    </string-array>
+</resources>
