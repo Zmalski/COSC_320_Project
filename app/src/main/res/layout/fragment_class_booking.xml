@@ -45,7 +45,7 @@
     <EditText
         android:id="@+id/MemberNumberEdit"
         android:maxLength="8"
-        android:hint="Enter 8 digit ID"
+        android:hint="Enter Number ID"
         android:inputType="number"
         android:layout_width="210dp"
         android:layout_height="39dp"

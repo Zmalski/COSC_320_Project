@@ -116,13 +116,15 @@ public class BookAClassEdit extends AppCompatActivity {
         confirmEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent confirmEdit = new Intent();
+            Intent confirmEdit = new Intent(BookAClassEdit.this, BookAClassEditedRev.class);
             confirmEdit.putExtra("editClass", editedClass);
             confirmEdit.putExtra("editDate", editedDate);
             confirmEdit.putExtra("editTime", editedTime);
 
-                confirmEdit.putExtra("textbox1", editMemberName.getText().toString());
-                confirmEdit.putExtra("textbox2", editMemberNumber.getText().toString());
+                confirmEdit.putExtra("textbox1", editName.getText().toString());
+                confirmEdit.putExtra("textbox2", editNumber.getText().toString());
+
+                startActivity(confirmEdit);
             }
         });
     }

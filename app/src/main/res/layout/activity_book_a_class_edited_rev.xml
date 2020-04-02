@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookAClassEditedRev">
+
+    <TextView
+        android:text="Review Your Edited Booking"
+        android:gravity="center"
+        android:layout_width="297dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="575dp" />
+
+    <TextView
+        android:id="@+id/memberNameEdited"
+        android:textSize="17dp"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="512dp" />
+
+    <TextView
+        android:id="@+id/memberNameEditedRev"
+        android:textStyle="bold"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="512dp"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/memberNumberEdited"
+        android:textSize="17dp"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="439dp" />
+
+
+    <TextView
+        android:id="@+id/memberNumberEditedRev"
+        android:textStyle="bold"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="439dp"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/classEdited"
+        android:textSize="17dp"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="369dp" />
+
+    <TextView
+        android:id="@+id/classEditedRev"
+        android:textStyle="bold"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="369dp"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/selectedTimeTitleEdited"
+        android:textSize="17dp"
+        android:gravity="center"
+        android:layout_width="264dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="295dp" />
+
+    <TextView
+        android:id="@+id/selectedDateEdited"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="227dp"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/selectedTimeEdited"
+        android:text="17dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="221dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="227dp"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/DisclaimerEdited"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="125dp" />
+
+    <Button
+        android:id="@+id/cancelClassEdited"
+        android:text="Cancel booking"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="272dp"
+        android:layout_marginBottom="26dp" />
+
+    <Button
+        android:text="Edit booking"
+        android:id="@+id/editClassEdited"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="27dp" />
+
+    <Button
+        android:text="Confirm booking"
+        android:id="@+id/confirmClassEdited"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="273dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="26dp" />
+
+
+</RelativeLayout>
