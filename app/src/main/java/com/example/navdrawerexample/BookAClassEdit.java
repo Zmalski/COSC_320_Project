@@ -12,6 +12,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class BookAClassEdit extends AppCompatActivity {
+
+    /**
+     * -> Edit Booking Screen <-
+     *
+     * Below is where variables are named
+     */
     TextView editMemberName, editMemberNumber, editFitnessClass, editName, editNumber, editSelectedTime;
     String editedClass = "";
     String editedDate = "";
@@ -21,6 +27,17 @@ public class BookAClassEdit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_a_class_edit);
+
+        /**
+         * -> Below variables are initialized <-
+         *
+         * Intents are also used to catch the data entered
+         * by the user and displayed in the corresponding text view
+         *
+         * .getStringExtra(); is used inorder to catch
+         * the user data from the previous screen and sets it
+         * to the text view
+         */
 
         editMemberName = findViewById(R.id.editMemberName);
         editMemberName.setText("Name: ");
@@ -46,6 +63,18 @@ public class BookAClassEdit extends AppCompatActivity {
 
         editSelectedTime = findViewById(R.id.editSelectedTime);
         editSelectedTime.setText("Change Your Time: ");
+
+        /**
+         * -> Below Spinners are Initialized <-
+         *
+         * Spinners are initialized and the spinner data is set
+         * using the ArrayAdapter and the String values are matched
+         * to the corresponding spinner
+         *
+         * .getSelectedItem().toString(); is used to make the selected
+         * value into a string inorder to be put into a text box in the next
+         * screen
+         */
 
         final Spinner editClassSpinner = (Spinner) findViewById(R.id.editClassSpinner);
 
@@ -102,6 +131,17 @@ public class BookAClassEdit extends AppCompatActivity {
         });
 
 
+        /**
+         * -> Buttons are Initialized <-
+         *
+         * Button functionality is set up and are
+         * functional by .setOnClickListener() and this is used
+         * to set up intents in order to pass data to the next activity
+         * or to stop an activity
+         *
+         * backToRev(); is used to stop the activity and returns the user
+         * to their original selections
+         */
         backToReview = findViewById(R.id.backToReview);
 
         backToReview.setOnClickListener(new View.OnClickListener() {
@@ -128,6 +168,8 @@ public class BookAClassEdit extends AppCompatActivity {
             }
         });
     }
+
+    // stops the activity
     public void backToRev(){
         finish();
     }

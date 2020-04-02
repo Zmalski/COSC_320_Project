@@ -20,13 +20,19 @@ import com.example.navdrawerexample.BookAClassTime;
 import com.example.navdrawerexample.R;
 
 public class classBookingFragment extends Fragment {
-
+    /**
+     * Class Booking Main Screen Done Jivraj Grewal.
+     * Taskbar Done By Zach and Evan.
+     * ---------------*-----------------
+     *
+     * Below initializing Text Views, Edit Text, Buttons, Spinners and String variables.
+     */
     TextView membername, memberNumber, fitnessClassTitle, fitnessClassLabel;
     EditText editMemberName, editMemberNumber;
 
     Button nextbutton;
     Spinner fitnessClassSpinner;
-    View fitnessClassView;
+
 
     String SelectedClass = "";
 
@@ -40,6 +46,13 @@ public class classBookingFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_class_booking, container, false);
         // End of fragment code
 
+        /**
+         * -> Below is where all variables are linked with their xml parts. <-
+         *
+         * .setText() is used to change the text whenever the activity is started
+         * and .findViewById() is used to link the TextViews and etc to their
+         * corresponding xml parts.
+         */
 
         membername = root.findViewById(R.id.MemberName);
         membername.setText("Member Name:");
@@ -62,6 +75,16 @@ public class classBookingFragment extends Fragment {
 
         fitnessClassSpinner = root.findViewById(R.id.fitnessClassSpinner);
 
+        /**
+         * -> Here is where the spinner data is added in <-
+         *
+         * R.array links the String values to the spinner so
+         * whenever the spinner is clicked it will show the String values.
+         *
+         * setOnItemSelectedListener is used to whenever the user clicks a
+         * specific value and passes it to the next activity when clicked.
+         */
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.fitnessClasses, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         fitnessClassSpinner.setAdapter(adapter);
@@ -77,6 +100,14 @@ public class classBookingFragment extends Fragment {
 
             }
         });
+
+        /**
+         * -> Button.setOnClickListener <-
+         *
+         * This is where the data is passed to the
+         * next activity when the button is clicked
+         * using the intent button.
+         */
         nextbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +119,6 @@ public class classBookingFragment extends Fragment {
             }
         });
 
-        //selecting class from spinner
 
 
         return root;

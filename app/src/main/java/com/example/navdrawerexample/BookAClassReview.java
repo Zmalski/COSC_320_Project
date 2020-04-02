@@ -11,6 +11,12 @@ import android.widget.Toast;
 
 public class BookAClassReview extends AppCompatActivity {
 
+    /**
+     * -> Booking Review Screen <-
+     *
+     * Below is where all the Text View and etc is
+     * initialized
+     */
     TextView memberNameRev, memberNumberRev, classRev, selectedTimeTitle, disclaimerRev, memberNameRevEdit, memberNumberRevEdit, classRevEdit, selectedTimeRev, selectedDateRev;
     Button confirm, edit, cancel;
 
@@ -19,7 +25,13 @@ public class BookAClassReview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_a_class_review);
 
-
+        /**
+         * -> Below data is grabbed <-
+         *
+         * The Text View is initialized and the intents setText()
+         * to the user input value when they typed in the edit text on
+         * the classBookingFragment Screen
+         */
         memberNameRevEdit = findViewById(R.id.memberNameRevEdit);
 
         memberNumberRevEdit = findViewById(R.id.memberNumberRevEdit);
@@ -32,6 +44,18 @@ public class BookAClassReview extends AppCompatActivity {
         String numberText = ii.getStringExtra("textbox2");
         memberNumberRevEdit.setText(numberText);
 
+        /**
+         * -> Below more Variables are Initialized <-
+         *
+         * Below the variables are initialized and set to
+         * their corresponding xml values and
+         * also the spinner values are brought up by previous intents from the
+         * last activity.
+         *
+         * this is done by setText(getIntent().setStringExtra("<string_value>"));
+         * where it pulls from the previous page and sets the textbox to the value
+         * set by the user.
+         */
         memberNameRev = findViewById(R.id.memberNameRev);
         memberNameRev.setText("Name: ");
 
@@ -63,6 +87,20 @@ public class BookAClassReview extends AppCompatActivity {
 
         cancel = findViewById(R.id.cancelClass);
 
+        /**
+         * -> Below Buttons function is set <-
+         *
+         * .setOnClickListener is used when the button is pressed it will do
+         * something. For all buttons a Intent is used inorder to navigate
+         * Activities or stop them.
+         *
+         * Toast messages are used to indicate if a booking has been canceled or
+         * been confirmed
+         *
+         * .putExtra sends the values to the edit booking
+         * activity in order keep the user entry since a database wasnt used.
+         *
+         */
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
