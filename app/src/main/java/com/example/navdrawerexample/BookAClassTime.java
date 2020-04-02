@@ -3,6 +3,7 @@ package com.example.navdrawerexample;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -14,6 +15,8 @@ public class BookAClassTime extends AppCompatActivity {
 
     TextView selectedClassView, selectedClassTitle, selectDateandTime, classDate, classTime, Disclaimer, TitleSelectedClassEdit, TitleSelectedClassEditNumber;
     Button timeClassNext, timeClassBack;
+    String time = "";
+    String date = "";
 
 
     @Override
@@ -50,18 +53,42 @@ public class BookAClassTime extends AppCompatActivity {
         Disclaimer = findViewById(R.id.Disclaimer);
         Disclaimer.setText("*NOTICE* All Classes Will Last 1.5 hrs From Selected Time");
 
-        Spinner classTimeSpinner = findViewById(R.id.classTimeSpinner);
+        final Spinner classTimeSpinner = (Spinner) findViewById(R.id.classTimeSpinner);
 
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.ClassTimes, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         classTimeSpinner.setAdapter(adapter2);
 
-        Spinner classDateSpinner = findViewById(R.id.classDateSpinner);
+        classTimeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+              time = classTimeSpinner.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        final Spinner classDateSpinner = (Spinner) findViewById(R.id.classDateSpinner);
 
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.datespinar, android.R.layout.simple_spinner_item);
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         classDateSpinner.setAdapter(adapter3);
+
+        classDateSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                date = classDateSpinner.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         timeClassBack = findViewById(R.id.fitnessTimeBack);
 
@@ -79,6 +106,11 @@ public class BookAClassTime extends AppCompatActivity {
             public void onClick(View v) {
 
             Intent nextBtn = new Intent(BookAClassTime.this, BookAClassReview.class);
+            nextBtn.putExtra("selectedClass", selectedClassView.getText().toString());
+
+                nextBtn.putExtra("selectedDate", date);
+                nextBtn.putExtra("selectedTime", time);
+
             nextBtn.putExtra("textbox1", TitleSelectedClassEdit.getText().toString());
             nextBtn.putExtra("textbox2", TitleSelectedClassEditNumber.getText().toString());
             startActivity(nextBtn);
