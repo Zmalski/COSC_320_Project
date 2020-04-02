@@ -18,9 +18,7 @@
         <activity android:name=".BookAClassActivityPg2" />
         <activity android:name=".BookAClassPg2" />
         <activity android:name=".TrainerPageActivity" />
-        <activity
-            android:name=".bookFacility"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".bookFacility" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

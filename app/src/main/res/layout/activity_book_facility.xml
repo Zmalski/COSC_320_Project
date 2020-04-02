@@ -3,42 +3,151 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".bookFacility">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Selected Time:"
+        app:layout_constraintStart_toStartOf="@+id/dayText"
+        app:layout_constraintTop_toBottomOf="@+id/dayText" />
 
     <TextView
         android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="188dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmTitle" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="188dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/day"
         app:layout_constraintTop_toBottomOf="@+id/day" />
 
     <TextView
         android:id="@+id/place"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="188dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/time"
         app:layout_constraintTop_toBottomOf="@+id/time" />
 
     <TextView
         android:id="@+id/activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="188dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/place"
         app:layout_constraintTop_toBottomOf="@+id/place" />
+
+    <TextView
+        android:id="@+id/activityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Area:"
+        app:layout_constraintStart_toStartOf="@+id/placeText"
+        app:layout_constraintTop_toBottomOf="@+id/placeText" />
+
+    <TextView
+        android:id="@+id/placeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Facility:"
+        app:layout_constraintStart_toStartOf="@+id/timeText"
+        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
+    <TextView
+        android:id="@+id/dayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:text="Selected Day:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmTitle" />
+
+    <TextView
+        android:id="@+id/confirmTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Booking Confirmation"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@android:string/cancel"
+        android:onClick="cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/equipSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/activity"
+        app:layout_constraintTop_toBottomOf="@+id/activity" />
+
+    <TextView
+        android:id="@+id/equipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Rent Equipment:"
+        app:layout_constraintStart_toStartOf="@+id/activityText"
+        app:layout_constraintTop_toBottomOf="@+id/activityText" />
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="280dp"
+        android:layout_height="260dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equipSwitch">
+
+        <LinearLayout
+            android:id="@+id/scrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
