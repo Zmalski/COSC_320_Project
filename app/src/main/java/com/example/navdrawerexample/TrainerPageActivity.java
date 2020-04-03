@@ -82,6 +82,7 @@ public class TrainerPageActivity extends AppCompatActivity {
             intent.putExtra("trainerNameSelected", tName.getText().toString());
         }
         startActivity(intent);
+        finish();
     }
 }
 

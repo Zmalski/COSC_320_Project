@@ -35,7 +35,8 @@ public class TrainerConfirmActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                trainerBookLaunch();
+                //trainerBookLaunch();
+                finish();
             }
         });
 

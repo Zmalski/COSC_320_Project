@@ -2,6 +2,7 @@ package com.example.navdrawerexample.ui.classBooking;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -35,7 +37,7 @@ public class classBookingFragment extends Fragment {
 
 
     String SelectedClass = "";
-
+    String memName, memNumb;
     private classBookingViewModel classBookingViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -58,7 +60,7 @@ public class classBookingFragment extends Fragment {
         membername.setText("Member Name:");
 
         memberNumber = root.findViewById(R.id.MemberNumber);
-        memberNumber.setText("Member Number:");
+        memberNumber.setText("Member ID:");
 
         fitnessClassLabel = root.findViewById(R.id.fitnessClassLabel);
         fitnessClassLabel.setText("Choose a Fitness Class Below:");
@@ -67,6 +69,9 @@ public class classBookingFragment extends Fragment {
         fitnessClassTitle.setText("Fitness Class Booking");
 
         editMemberName = root.findViewById(R.id.MemberNameEdit);
+        memName = editMemberName.getText().toString().trim();
+
+
 
         editMemberNumber = root.findViewById(R.id.MemberNumberEdit);
 
@@ -112,10 +117,23 @@ public class classBookingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent nextBut = new Intent(getActivity(), BookAClassTime.class);
-                nextBut.putExtra("selectedClass", SelectedClass);
-                nextBut.putExtra("textbox1", editMemberName.getText().toString());
-                nextBut.putExtra("textbox2", editMemberNumber.getText().toString());
-                startActivity(nextBut);
+                if(editMemberName.length() == 0 && editMemberNumber.length() == 0){
+                    editMemberName.setError("Enter Your Name Please");
+                    editMemberNumber.setError("Enter Your ID Please");
+
+                }
+
+                else if(editMemberNumber.length() != 8){
+                    editMemberNumber.setError("Enter 8 digit ID Please");
+                }
+
+
+                else {
+                    nextBut.putExtra("selectedClass", SelectedClass);
+                    nextBut.putExtra("textbox1", editMemberName.getText().toString());
+                    nextBut.putExtra("textbox2", editMemberNumber.getText().toString());
+                    startActivity(nextBut);
+                }
             }
         });
 

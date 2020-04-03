@@ -25,6 +25,8 @@ public class TrainerBookingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trainer_booking);
 
+        //finish();
+
         backButton = findViewById(R.id.trainerPageBackButton);
         bookButton = findViewById(R.id.trainerPageBookButton);
 
@@ -74,7 +76,10 @@ public class TrainerBookingActivity extends AppCompatActivity {
     }
 
     public void backToTrainerList() {
+        //Intent intent = new Intent(this, TrainerActivity.class);
+        //startActivity(intent);
         finish();
+
     }
 
     public void trainerConfirmLaunch() {
