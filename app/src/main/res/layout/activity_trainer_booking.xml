@@ -45,35 +45,9 @@
         android:id="@+id/bookAnAppointmentTitle"
         android:layout_width="407dp"
         android:layout_height="35dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="284dp"
         android:text="Book an appointment this week:"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="22dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/dayTitle"
-        android:layout_width="50dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="364dp"
-        android:text="Day"
-        android:textAlignment="textStart"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="22dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/timeTitle"
-        android:layout_width="57dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="428dp"
-        android:text="Time"
-        android:textAlignment="textStart"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="22dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,8 +57,8 @@
         android:id="@+id/datespinner"
         android:layout_width="287dp"
         android:layout_height="34dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="340dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -92,8 +66,34 @@
         android:id="@+id/timespinner"
         android:layout_width="287dp"
         android:layout_height="34dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="384dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTitle"
+        android:layout_width="57dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="384dp"
+        android:text="Time"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dayTitle"
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="340dp"
+        android:text="Day"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,8 +101,8 @@
         android:id="@+id/textView"
         android:layout_width="364dp"
         android:layout_height="88dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="432dp"
         android:text="* All appointments with trainers are 50 minutes in length and are held in GYM005. \n \n We also recommend showing up at least 5 minutes before your appointment."
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"

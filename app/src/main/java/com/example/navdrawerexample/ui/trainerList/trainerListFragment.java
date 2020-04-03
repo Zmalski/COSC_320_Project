@@ -43,7 +43,7 @@ public class trainerListFragment extends Fragment {
         t2Desc = root.findViewById(R.id.trainer2Desc);
         t3Desc = root.findViewById(R.id.trainer3Desc);
 
-        backButton = root.findViewById(R.id.trainerListBackButton);
+        //backButton = root.findViewById(R.id.trainerListBackButton);
 
         t1View = root.findViewById(R.id.trainer1View);
         t2View = root.findViewById(R.id.trainer2View);
