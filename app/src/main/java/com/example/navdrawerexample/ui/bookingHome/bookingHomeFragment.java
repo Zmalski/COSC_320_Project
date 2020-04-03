@@ -31,6 +31,7 @@ public class bookingHomeFragment extends Fragment {
     TextView area1;
     TextView area2;
     TextView area3;
+    boolean robo = false;
 
     int pos;
     int spot;
@@ -158,15 +159,20 @@ public class bookingHomeFragment extends Fragment {
                     if (pos == 3 && spot == 2) {
                         temp = "badminton";
                     }
-                    // the facility, specific area under the facility, time slot and day is passed to the book facility activity
-                    Bundle extras = new Bundle();
-                    extras.putString("place", areaspinner.getSelectedItem().toString());
-                    extras.putString("day", datespinner.getSelectedItem().toString());
-                    extras.putString("time", time);
-                    extras.putString("activity", temp);
-                    Intent facility = new Intent(getActivity(), bookFacility.class);
-                    facility.putExtras(extras);
-                    startActivity(facility);
+                    if(robo == false){
+                        Toast.makeText(getActivity(), "PLEASE SELECT TIME BLOCK", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        // the facility, specific area under the facility, time slot and day is passed to the book facility activity
+                        Bundle extras = new Bundle();
+                        extras.putString("place", areaspinner.getSelectedItem().toString());
+                        extras.putString("day", datespinner.getSelectedItem().toString());
+                        extras.putString("time", time);
+                        extras.putString("activity", temp);
+                        Intent facility = new Intent(getActivity(), bookFacility.class);
+                        facility.putExtras(extras);
+                        startActivity(facility);
+                    }
                 }
             }
         });
@@ -208,6 +214,7 @@ public class bookingHomeFragment extends Fragment {
                     if (finali < 18 && finali > 14) {
                         time = "18-20";
                     }
+                    robo = true;
                     availa = (String) grid[finali].getText();
                     for (int i = 0; i < 18; i++) {
                         if (i != finali) {
