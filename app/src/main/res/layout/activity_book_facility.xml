@@ -6,11 +6,26 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/equipTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Equipment"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equipText" />
+
+    <TextView
         android:id="@+id/timeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Selected Time:"
+        android:textColor="@color/c3"
         app:layout_constraintStart_toStartOf="@+id/dayText"
         app:layout_constraintTop_toBottomOf="@+id/dayText" />
 
@@ -18,38 +33,38 @@
         android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="48dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/dayText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmTitle" />
+        app:layout_constraintTop_toTopOf="@+id/dayText" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/timeText"
         app:layout_constraintEnd_toEndOf="@+id/day"
-        app:layout_constraintTop_toBottomOf="@+id/day" />
+        app:layout_constraintTop_toTopOf="@+id/timeText" />
 
     <TextView
         android:id="@+id/place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/placeText"
         app:layout_constraintEnd_toEndOf="@+id/time"
-        app:layout_constraintTop_toBottomOf="@+id/time" />
+        app:layout_constraintTop_toTopOf="@+id/placeText" />
 
     <TextView
         android:id="@+id/activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/activityText"
         app:layout_constraintEnd_toEndOf="@+id/place"
-        app:layout_constraintTop_toBottomOf="@+id/place" />
+        app:layout_constraintTop_toTopOf="@+id/activityText" />
 
     <TextView
         android:id="@+id/activityText"
@@ -57,6 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Area:"
+        android:textColor="@color/c3"
         app:layout_constraintStart_toStartOf="@+id/placeText"
         app:layout_constraintTop_toBottomOf="@+id/placeText" />
 
@@ -66,6 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Facility:"
+        android:textColor="@color/c3"
         app:layout_constraintStart_toStartOf="@+id/timeText"
         app:layout_constraintTop_toBottomOf="@+id/timeText" />
 
@@ -73,9 +90,10 @@
         android:id="@+id/dayText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
         android:text="Selected Day:"
+        android:textColor="@color/c3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmTitle" />
 
@@ -87,7 +105,7 @@
         android:text="Booking Confirmation"
         android:textAllCaps="false"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -99,6 +117,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="24dp"
         android:text="Next"
+        android:onClick="next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -110,20 +129,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:text="@android:string/cancel"
         android:onClick="cancel"
+        android:text="@android:string/cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nextButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Switch
-        android:id="@+id/equipSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/activity"
-        app:layout_constraintTop_toBottomOf="@+id/activity" />
 
     <TextView
         android:id="@+id/equipText"
@@ -131,23 +142,116 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Rent Equipment:"
-        app:layout_constraintStart_toStartOf="@+id/activityText"
-        app:layout_constraintTop_toBottomOf="@+id/activityText" />
+        android:textColor="@color/c3"
+        app:layout_constraintStart_toStartOf="@+id/peopleText"
+        app:layout_constraintTop_toBottomOf="@+id/peopleText" />
+
+    <Switch
+        android:id="@+id/equipSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/equipText"
+        app:layout_constraintEnd_toEndOf="@+id/activity"
+        app:layout_constraintTop_toTopOf="@+id/equipText" />
 
     <ScrollView
         android:id="@+id/scroller"
-        android:layout_width="280dp"
-        android:layout_height="260dp"
+        android:layout_width="316dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="16dp"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/cancelButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/equipSwitch">
+        app:layout_constraintTop_toBottomOf="@+id/equipTitle">
 
         <LinearLayout
             android:id="@+id/scrollLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shoes_lifejacketText"
+                    android:layout_width="256dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Pairs of Shoes:"
+                    android:textColor="@color/c3" />
+
+                <Spinner
+                    android:id="@+id/shoesSpinner"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/racketText"
+                    android:layout_width="256dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Number of Rackets:"
+                    android:textColor="@color/c3" />
+
+                <Spinner
+                    android:id="@+id/racketSpinner"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical" />
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/ballSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:text="Switch"
+                android:textColor="@color/c3" />
+
+        </LinearLayout>
     </ScrollView>
+
+    <Spinner
+        android:id="@+id/numPeopleSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="@+id/peopleText"
+        app:layout_constraintEnd_toEndOf="@+id/activity"
+        app:layout_constraintTop_toTopOf="@+id/peopleText" />
+
+    <TextView
+        android:id="@+id/peopleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Number of People:"
+        android:textColor="@color/c3"
+        app:layout_constraintStart_toStartOf="@+id/activityText"
+        app:layout_constraintTop_toBottomOf="@+id/activityText" />
+
+    <TextView
+        android:id="@+id/finePrint"
+        android:layout_width="317dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="All equipment rentals are provided to our valued members free of charge. They will be available for pickup at the front desk during your reserved time slot."
+        android:textColor="@color/c1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroller" />
 </androidx.constraintlayout.widget.ConstraintLayout>
