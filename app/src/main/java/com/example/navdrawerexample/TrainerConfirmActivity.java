@@ -36,6 +36,7 @@ public class TrainerConfirmActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 trainerBookLaunch();
+                finish();
             }
         });
 
