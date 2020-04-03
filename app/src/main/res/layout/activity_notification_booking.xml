@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notificationBooking">
+
+    <Button
+        android:id="@+id/book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:text="Book"
+        android:onClick="book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/share" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="@android:string/cancel"
+        android:onClick="cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/book"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Share"
+        android:onClick="share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inAppText" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Notifications"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/smsText"
+        android:layout_width="150dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="24dp"
+        android:background="#4000574B"
+        android:gravity="center|right"
+        android:paddingEnd="10dp"
+        android:text="SMS"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+    <CheckBox
+        android:id="@+id/emailText"
+        android:layout_width="150dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:background="#4000574B"
+        android:gravity="center|right"
+        android:paddingEnd="10dp"
+        android:text="Email"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/smsText"
+        app:layout_constraintTop_toBottomOf="@+id/smsText" />
+
+    <CheckBox
+        android:id="@+id/inAppText"
+        android:layout_width="150dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:background="#4000574B"
+        android:gravity="center|right"
+        android:paddingEnd="10dp"
+        android:text="App Notification"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Share this Booking!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shareButton" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center|center_vertical"
+        android:text="How would you like us to remind you about your booking?"
+        android:textColor="@color/c1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

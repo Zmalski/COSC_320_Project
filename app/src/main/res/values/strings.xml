@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">COSC_320_Project</string>
+    <string name="app_name">Recreation Center App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Default User</string>
+    <string name="nav_header_subtitle">user.default@email.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -44,4 +44,18 @@
         <item>2:00 PM</item>
         <item>4:00 PM</item>
     </string-array>
+    <string-array name="numberPeople">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="equipment">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookAClassReview">
+    tools:context=".BookAClassEditedRev">
 
     <TextView
-        android:text="Review Your Booking"
+        android:text="Review Your Edited Booking"
         android:gravity="center"
         android:layout_width="297dp"
         android:layout_height="75dp"
@@ -19,7 +19,7 @@
         android:layout_marginBottom="575dp" />
 
     <TextView
-        android:id="@+id/memberNameRev"
+        android:id="@+id/memberNameEdited"
         android:textSize="17dp"
         android:layout_width="164dp"
         android:layout_height="59dp"
@@ -31,7 +31,7 @@
         android:layout_marginBottom="512dp" />
 
     <TextView
-        android:id="@+id/memberNameRevEdit"
+        android:id="@+id/memberNameEditedRev"
         android:textStyle="bold"
         android:layout_width="204dp"
         android:layout_height="59dp"
@@ -44,7 +44,7 @@
         android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/memberNumberRev"
+        android:id="@+id/memberNumberEdited"
         android:textSize="17dp"
         android:layout_width="164dp"
         android:layout_height="59dp"
@@ -57,7 +57,7 @@
 
 
     <TextView
-        android:id="@+id/memberNumberRevEdit"
+        android:id="@+id/memberNumberEditedRev"
         android:textStyle="bold"
         android:layout_width="204dp"
         android:layout_height="59dp"
@@ -70,7 +70,7 @@
         android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/classRev"
+        android:id="@+id/classEdited"
         android:textSize="17dp"
         android:layout_width="164dp"
         android:layout_height="59dp"
@@ -82,7 +82,7 @@
         android:layout_marginBottom="369dp" />
 
     <TextView
-        android:id="@+id/classRevEdit"
+        android:id="@+id/classEditedRev"
         android:textStyle="bold"
         android:layout_width="204dp"
         android:layout_height="59dp"
@@ -95,7 +95,7 @@
         android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/selectedTimeTitle"
+        android:id="@+id/selectedTimeTitleEdited"
         android:textSize="17dp"
         android:gravity="center"
         android:layout_width="264dp"
@@ -108,7 +108,7 @@
         android:layout_marginBottom="295dp" />
 
     <TextView
-        android:id="@+id/selectedDateRev"
+        android:id="@+id/selectedDateEdited"
         android:gravity="center"
         android:textStyle="bold"
         android:layout_width="164dp"
@@ -122,7 +122,7 @@
         android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/selectedTimeRev"
+        android:id="@+id/selectedTimeEdited"
         android:text="17dp"
         android:textStyle="bold"
         android:gravity="center"
@@ -137,7 +137,7 @@
         android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/DisclaimerRev"
+        android:id="@+id/DisclaimerEdited"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -151,7 +151,7 @@
         android:layout_marginBottom="125dp" />
 
     <Button
-        android:id="@+id/cancelClass"
+        android:id="@+id/cancelClassEdited"
         android:text="Cancel booking"
         android:layout_width="109dp"
         android:layout_height="70dp"
@@ -164,7 +164,7 @@
 
     <Button
         android:text="Edit booking"
-        android:id="@+id/editClass"
+        android:id="@+id/editClassEdited"
         android:layout_width="109dp"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
@@ -176,7 +176,7 @@
 
     <Button
         android:text="Confirm booking"
-        android:id="@+id/confirmClass"
+        android:id="@+id/confirmClassEdited"
         android:layout_width="109dp"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"

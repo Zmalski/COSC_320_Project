@@ -180,7 +180,7 @@ public class bookingHomeFragment extends Fragment {
             grid[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    grid[finali].setTextColor(Color.GREEN);
+                    grid[finali].setTextColor(Color.RED);
                     if (finali == 0 || finali == 3 || finali == 6 || finali == 9 || finali == 12 || finali == 15) {
                         pos = 1;
                     }
@@ -211,7 +211,7 @@ public class bookingHomeFragment extends Fragment {
                     availa = (String) grid[finali].getText();
                     for (int i = 0; i < 18; i++) {
                         if (i != finali) {
-                            grid[i].setTextColor(Color.BLUE);
+                            grid[i].setTextColor(Color.BLACK);
                         }
                     }
                 }
@@ -329,48 +329,8 @@ public class bookingHomeFragment extends Fragment {
         });
 
 
-        for (int i = 0; i < 18; i++) {
-            final int finali = i;
-            grid[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    grid[finali].setTextColor(Color.GREEN);
-                    if (finali == 0 || finali == 3 || finali == 6 || finali == 9 || finali == 12 || finali == 15) {
-                        pos = 1;
-                    }
-                    if (finali == 1 || finali == 4 || finali == 7 || finali == 10 || finali == 13 || finali == 16) {
-                        pos = 2;
-                    }
-                    if (finali == 2 || finali == 5 || finali == 8 || finali == 11 || finali == 14 || finali == 17) {
-                        pos = 3;
-                    }
-                    if (finali < 3) {
-                        time = "8-10";
-                    }
-                    if (finali < 6 && finali > 2) {
-                        time = "10-12";
-                    }
-                    if (finali < 9 && finali > 5) {
-                        time = "12-14";
-                    }
-                    if (finali < 12 && finali > 8) {
-                        time = "14-16";
-                    }
-                    if (finali < 15 && finali > 11) {
-                        time = "14-18";
-                    }
-                    if (finali < 18 && finali > 14) {
-                        time = "18-20";
-                    }
-                    availa = (String) grid[finali].getText();
-                    for (int i = 0; i < 18; i++) {
-                        if (i != finali) {
-                            grid[i].setTextColor(Color.BLUE);
-                        }
-                    }
-                }
-            });
-        }
+
+
 
 
         datespinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
