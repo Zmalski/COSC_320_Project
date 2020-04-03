@@ -2,6 +2,7 @@ package com.example.navdrawerexample.ui.bookingHome;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -187,6 +188,7 @@ public class bookingHomeFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     grid[finali].setTextColor(Color.RED);
+                    grid[finali].setBackgroundResource(R.color.sel);
                     if (finali == 0 || finali == 3 || finali == 6 || finali == 9 || finali == 12 || finali == 15) {
                         pos = 1;
                     }
@@ -219,6 +221,7 @@ public class bookingHomeFragment extends Fragment {
                     for (int i = 0; i < 18; i++) {
                         if (i != finali) {
                             grid[i].setTextColor(Color.BLACK);
+                            grid[i].setBackgroundResource(R.color.unsel);
                         }
                     }
                 }
