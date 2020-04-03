@@ -60,7 +60,7 @@ public class classBookingFragment extends Fragment {
         membername.setText("Member Name:");
 
         memberNumber = root.findViewById(R.id.MemberNumber);
-        memberNumber.setText("Member Number:");
+        memberNumber.setText("Member ID:");
 
         fitnessClassLabel = root.findViewById(R.id.fitnessClassLabel);
         fitnessClassLabel.setText("Choose a Fitness Class Below:");
