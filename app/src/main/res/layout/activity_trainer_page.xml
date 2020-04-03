@@ -43,8 +43,8 @@
         android:id="@+id/trainerSpecializationTitle"
         android:layout_width="228dp"
         android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="388dp"
         android:text="Specializations"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
@@ -67,10 +67,10 @@
 
     <TextView
         android:id="@+id/trainerSpecializations"
-        android:layout_width="351dp"
-        android:layout_height="146dp"
+        android:layout_width="348dp"
+        android:layout_height="96dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="428dp"
         android:text="Trainer specializations"
         android:textColor="@color/c3"
         android:textSize="20dp"
@@ -80,8 +80,8 @@
 
     <TextView
         android:id="@+id/trainerDescription"
-        android:layout_width="342dp"
-        android:layout_height="97dp"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="316dp"
         android:text="Trainer2 description"

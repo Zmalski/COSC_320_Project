@@ -11,20 +11,30 @@
         android:id="@+id/trainer1View"
         android:layout_width="410dp"
         android:layout_height="153dp"
-        android:layout_marginTop="72dp"
-        android:clickable="true"
+        android:layout_marginTop="52dp"
         android:alpha="0.25"
         android:background="@color/colorPrimaryDark"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/trainer1Img"
+        android:layout_width="136dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trainer1" />
+
     <TextView
-        android:id="@+id/trainer3Desc"
+        android:id="@+id/trainer1Desc"
         android:layout_width="232dp"
         android:layout_height="81dp"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="480dp"
-        android:text="Trainer3 description"
+        android:layout_marginTop="104dp"
+        android:text="Trainer1 description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +43,7 @@
         android:layout_width="228dp"
         android:layout_height="30dp"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="64dp"
         android:text="Trainer1 name"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="25dp"
@@ -44,44 +54,20 @@
         android:id="@+id/trainer2View"
         android:layout_width="412dp"
         android:layout_height="147dp"
-        android:layout_marginTop="252dp"
-        android:clickable="true"
+        android:layout_marginTop="216dp"
         android:alpha="0.25"
         android:background="@color/colorPrimaryDark"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/trainer2Name"
-        android:layout_width="228dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="264dp"
-        android:text="Trainer2 name"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/trainer3Name"
-        android:layout_width="228dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="444dp"
-        android:text="Trainer3 name"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/trainer1Desc"
+        android:id="@+id/trainer2Desc"
         android:layout_width="232dp"
         android:layout_height="81dp"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="124dp"
-        android:text="Trainer1 description"
+        android:layout_marginTop="264dp"
+        android:text="Trainer2 description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,20 +76,54 @@
         android:layout_width="122dp"
         android:layout_height="119dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="228dp"
         android:foreground="@drawable/trainer2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/trainer1" />
 
+    <TextView
+        android:id="@+id/trainer2Name"
+        android:layout_width="228dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="228dp"
+        android:text="Trainer2 name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <View
         android:id="@+id/trainer3View"
         android:layout_width="409dp"
         android:layout_height="155dp"
-        android:layout_marginTop="424dp"
-        android:clickable="true"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="376dp"
         android:alpha=".25"
+        android:background="@color/colorPrimaryDark"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trainer3Name"
+        android:layout_width="228dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="396dp"
+        android:text="Trainer3 name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trainer3Desc"
+        android:layout_width="232dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="432dp"
+        android:text="Trainer3 description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,48 +132,18 @@
         android:layout_width="120dp"
         android:layout_height="122dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="444dp"
+        android:layout_marginTop="396dp"
         android:foreground="@drawable/trainer3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/trainer1" />
-
-    <ImageView
-        android:id="@+id/trainer1Img"
-        android:layout_width="136dp"
-        android:layout_height="117dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="88dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trainer1" />
-
-    <TextView
-        android:id="@+id/trainer2Desc"
-        android:layout_width="232dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="300dp"
-        android:text="Trainer2 description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/trainerListBackButton"
-        android:layout_width="131dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="176dp"
         android:layout_height="24dp"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="Select a Trainer"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
