@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -64,6 +65,7 @@ public class TrainerConfirmActivity extends AppCompatActivity {
     }
 
     public void bookingsLaunch() {
+        Toast.makeText(getApplicationContext(),"Booking Confirmed!", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivity.class);
         if (trainerNum.equals("1")) {
             intent.putExtra("trainerSelected", "1");
