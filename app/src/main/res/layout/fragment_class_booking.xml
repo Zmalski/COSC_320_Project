@@ -21,7 +21,7 @@
     <EditText
         android:id="@+id/MemberNameEdit"
         android:inputType="textPersonName"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
         android:hint="Enter Full Name"
         android:layout_width="210dp"
         android:layout_height="39dp"
