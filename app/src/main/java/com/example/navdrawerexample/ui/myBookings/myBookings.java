@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.navdrawerexample.MainActivity;
 import com.example.navdrawerexample.R;
+import com.example.navdrawerexample.TrainerBookingActivity;
 import com.example.navdrawerexample.bookFacility;
 import com.example.navdrawerexample.ui.bookingHome.bookingHomeViewModel;
 import com.example.navdrawerexample.ui.classBooking.classBookingViewModel;
@@ -104,6 +105,60 @@ public class myBookings extends Fragment {
         }
         //End of the booked areas section
 
+        //booked trainers section start
+      final  Button editTrainer, cancelTrainer;
+      editTrainer = root.findViewById(R.id.eddybutton);
+      cancelTrainer = root.findViewById(R.id.cannButton);
+      final TextView day = root.findViewById(R.id.trainerDay);
+      final TextView time = root.findViewById(R.id.trainerTime);
+      final TextView trainer = root.findViewById(R.id.textView17);
+      final TextView facility = root.findViewById(R.id.textView18);
+
+        editTrainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TrainerBookingActivity.class);
+                intent.putExtra("trainerSelected", "1");
+                intent.putExtra("trainerNameSelected", "Dinesh Gosh");
+                startActivity(intent);
+            }
+        });
+
+        cancelTrainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setCancelable(true);
+                builder.setTitle("Confirmation");
+                builder.setMessage("Are you sure you would like to cancel this booking?");
+                builder.setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) { // If yes,  remove view.
+
+                                ((ViewGroup) day.getParent()).removeView(day);
+                                ((ViewGroup) time.getParent()).removeView(time);
+                                ((ViewGroup) facility.getParent()).removeView(facility);
+                                ((ViewGroup) trainer.getParent()).removeView(trainer);
+                                ((ViewGroup) editTrainer.getParent()).removeView(editTrainer);
+                                ((ViewGroup) cancelTrainer.getParent()).removeView(cancelTrainer);
+                                // NOTE: This is only a temporary removal, for prototype purposes
+                                Toast.makeText(getActivity(), "Booking Cancelled!",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // If user clicks no, do nothing
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+            }
+        });
 
         return root;
 
