@@ -16,5 +16,9 @@
             android:id="@+id/nav_classBooking"
             android:icon="@drawable/baseline_book_black_18dp"
             android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_myBookings"
+            android:icon="@drawable/baseline_bookmarks_black_18dp"
+            android:title="My Bookings" />
     </group>
 </menu>

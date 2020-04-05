@@ -40,4 +40,9 @@
         android:name="com.example.navdrawerexample.ui.classBooking.classBookingFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_class_booking" />
+    <fragment
+        android:id="@+id/nav_myBookings"
+        android:name="com.example.navdrawerexample.ui.myBookings.myBookings"
+        android:label="My bookings"
+        tools:layout="@layout/my_bookings_fragment" />
 </navigation>
