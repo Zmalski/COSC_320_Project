@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.navdrawerexample.BookAClassEdit;
 import com.example.navdrawerexample.MainActivity;
 import com.example.navdrawerexample.R;
 import com.example.navdrawerexample.TrainerBookingActivity;
@@ -159,6 +160,77 @@ public class myBookings extends Fragment {
 
             }
         });
+
+        //end of trainer code
+
+        //start of fitness class code
+
+        //initialization of all variables
+        final Button editFitnessClass, cancelFitnessClass;
+        editFitnessClass = root.findViewById(R.id.fitnessClassEdit);
+        cancelFitnessClass = root.findViewById(R.id.fitnessClassCancel);
+        final TextView memName, memId, memClass, memTime, memDay, memTextView, memTimeDay, memClassSelected;
+        memName = root.findViewById(R.id.fitnessClassMemberName);
+        memId = root.findViewById(R.id.fitnessClassMemId);
+        memClass = root.findViewById(R.id.fitnessClass);
+        memTime = root.findViewById(R.id.fitnessClassTimeBooking);
+        memDay = root.findViewById(R.id.fitnessClassDay);
+        memTextView = root.findViewById(R.id.memTextView);
+        memTimeDay = root.findViewById(R.id.memDateTime);
+        memClassSelected = root.findViewById(R.id.memClassSelected);
+
+        // edit fitness class button that send you to BookAClassEdit
+        editFitnessClass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent editInt = new Intent(getActivity(), BookAClassEdit.class);
+
+                editInt.putExtra("textbox1", memName.getText().toString());
+                editInt.putExtra("textbox2", memId.getText().toString());
+                startActivity(editInt);
+            }
+        });
+        // cancel button where it deletes the linear layout
+        cancelFitnessClass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setCancelable(true);
+                builder.setTitle("Confirmation");
+                builder.setMessage("Are you sure you would like to cancel this booking?");
+                builder.setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) { // If yes,  remove view.
+
+                                ((ViewGroup) memTextView.getParent()).removeView(memTextView);
+                                ((ViewGroup) memTimeDay.getParent()).removeView(memTimeDay);
+                                ((ViewGroup) memClassSelected.getParent()).removeView(memClassSelected);
+                                ((ViewGroup) memName.getParent()).removeView(memName);
+                                ((ViewGroup) memId.getParent()).removeView(memId);
+                                ((ViewGroup) memClass.getParent()).removeView(memClass);
+                                ((ViewGroup) memTime.getParent()).removeView(memTime);
+                                ((ViewGroup) memDay.getParent()).removeView(memDay);
+                                ((ViewGroup) editFitnessClass.getParent()).removeView(editFitnessClass);
+                                ((ViewGroup) cancelFitnessClass.getParent()).removeView(cancelFitnessClass);
+                                // NOTE: This is only a temporary removal, for prototype purposes
+                                Toast.makeText(getActivity(), "Booking Cancelled!",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // If user clicks no, do nothing
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+            }
+        });
+            // end of fitness class bookings
 
         return root;
 

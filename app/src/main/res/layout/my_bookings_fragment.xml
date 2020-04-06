@@ -336,18 +336,147 @@
         </LinearLayout>
     </ScrollView>
 
+
     <ScrollView
         android:id="@+id/classesScroller"
-        android:layout_width="409dp"
-        android:layout_height="165dp"
+        android:layout_width="404dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary20">
+
+                    <TextView
+                        android:id="@+id/memTextView"
+                        android:layout_width="131dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Member Name/ID" />
+
+                    <TextView
+                        android:id="@+id/memClassSelected"
+                        android:layout_width="114dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Class Selected" />
+
+                    <TextView
+                        android:id="@+id/memDateTime"
+                        android:layout_width="78dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Date/Time" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="73dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="134dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fitnessClassMemberName"
+                            android:layout_width="131dp"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:text="Joe Schmo"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+                        <TextView
+                            android:id="@+id/fitnessClassMemId"
+                            android:layout_width="131dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="69698420"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/fitnessClass"
+                        android:layout_width="114dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Spin Class"
+                        android:textColor="@color/colorPrimaryDark" />
+
+
+                    <LinearLayout
+                        android:layout_width="77dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fitnessClassTimeBooking"
+                            android:layout_width="75dp"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="4:00 PM"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+                        <TextView
+                            android:id="@+id/fitnessClassDay"
+                            android:layout_width="75dp"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:text="Monday"
+                            android:textColor="@color/colorPrimaryDark" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/fitnessClassEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Edit" />
+
+                        <Button
+                            android:id="@+id/fitnessClassCancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cancel" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
     </ScrollView>
 
     <ScrollView
